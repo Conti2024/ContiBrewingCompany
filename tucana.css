@@ -1,0 +1,1591 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+	--flama: #E04D2A;
+	--hueso: #F1E3C5;
+    --cactus: #6A8734;
+}
+
+main{	
+	min-height: 100vh;
+	background-image: linear-gradient(-45deg, #6A8734 50%, #E04D2A 50%);
+}
+
+html {
+	font-size: 62.5%;
+	background-image: linear-gradient(-45deg, #416BB2 50%, #F1E3C5 50%);
+	font-family: 'Poppins', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+.heading-1 {
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
+	color: var(--hueso);
+
+}
+
+.nosotros{
+	width: 100%;
+	background: var(--hueso);
+	text-align:center;
+	font-size: 2rem;
+	color: #000;
+	padding-left: 15px;
+    padding-right: 15px;
+	line-height: 2;
+}
+
+.parallax {
+	/* Ajusta la altura según sea necesario */
+	height: 90vh; /* Esto hace que la sección tenga el 100% de la altura de la ventana del navegador */
+	background-image: url('img/tucanabanner.png');
+	background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+	background-attachment: fixed; /* Esto fija la imagen de fondo para que permanezca en su posición mientras se desplaza la página */
+	background-position: center; /* Centra la imagen de fondo */
+	overflow: hidden; /* Oculta el desbordamiento para evitar que la imagen se muestre fuera de la sección */
+  }
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.whatsapp-btn img {
+    width: 120px;
+    height: auto;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.whatsapp-btn:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+.cerveza {
+    position: absolute;
+    top: 50%; /* Centra la cerveza verticalmente */
+    left: 50%; /* Centra la cerveza horizontalmente */
+    transform: translate(-50%, -50%);
+    width: 150px; /* Ajusta el tamaño de la imagen */
+}
+
+/* ********************************** */
+/*               HEADER               */
+/* ********************************** */
+
+.header{
+	background-color: var(--hueso);
+	padding: 0px 0%;
+	justify-content: space-between;
+	z-index: 1000;
+	display: flex;
+	padding-top: 15px;
+}
+.logo{
+	display: flex;
+}
+.navigation {
+    order: -1; /* Coloca el menú a la izquierda */
+}
+
+.navigation ul{
+	list-style: none;
+	padding-bottom: 0;
+}
+
+.header .navigation ul li{
+	position: relative;
+	display: inline-block; /* Cambiado a inline-block */
+}
+
+.header .navigation ul li a{
+	font-size: 16px;
+	font-weight:450;
+	color: var(--flama);
+	text-decoration: none;
+	padding: 15px;
+	display: block;
+	transition: all .2s ease;
+	letter-spacing: 4px;
+	margin: 0;
+}
+.header .navigation ul li:hover a {
+	padding: 15px;
+	background-color: var(--cactus); /* Cambiado para aplicar el color de fondo al enlace */
+	color: var(--hueso)/* Cambiado para cambiar el color del texto */
+  }
+  
+  .header .navigation ul li:hover {
+	background-color: var(--tercer-color); /* Cambiado para aplicar el color de fondo al elemento li */
+	color: var(--flama); /* Cambiado para cambiar el color del texto */
+  }
+
+.header .navigation ul li a:hover > ul{
+	background-color: #fff;
+	display: block; /* Cambiado de 'initial' a 'block' */
+	color: var(--cactus);
+	padding: 15px;
+}
+
+.header .navigation ul li ul{
+	position: absolute;
+	top: 100%; /* Ajustado a 100% */
+	left: 0;
+	background-color: var(--hueso);
+	display: none;
+	padding: 0; /* Ajustado el padding */
+}
+.header .navigation ul li ul li {
+	position: relative; /* Cambiado de absolute a relative */
+	width: 100%;
+}
+
+.header .navigation ul li ul li a{
+	font-size: 15px;
+	text-transform: capitalize;
+	color: #000;
+}
+
+.header .navigation ul li ul li a:hover{
+	color: var(--tercer-color);
+	background-color: var(--hueso);
+}
+.header .navigation ul li ul li ul{
+	position: absolute;
+	top: 0;
+	right: 300px;
+}
+
+.header .navigation ul li ul li{
+	margin: 0;
+	width: 100%;
+	letter-spacing: 4px;
+}
+
+.header .navigation ul li:hover > ul{
+	display: initial
+}
+
+#toggle,
+.header label{
+	display: none;
+	cursor: pointer;
+}
+
+.menu{
+	width: 45px;
+	height: 45px;
+}
+
+.container-hero {
+	background-color:  var(--second-color);
+	display:flex;
+	justify-content: flex-end;
+	padding-right: 60px;
+
+}
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+.customer-support {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.customer-support i {
+	font-size: 3.3rem;
+}
+
+.content-customer-support {
+	display: flex;
+	flex-direction: column;
+}
+
+.container-logo {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.container-logo i {
+	font-size: 3rem;
+}
+
+.container-logo h1 a {
+	text-decoration: none;
+	color: var(--hueso);
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+.container-user {
+	display: flex;
+	gap: 1rem;
+	cursor: pointer;
+	align-items: center;
+}
+
+.container-user .fa-user {
+	font-size: 3rem;
+	color: var(--flama);
+	padding-right: 2.5rem;
+	border-right: 1px solid var(--flama);
+}
+
+.container-user .fa-basket-shopping {
+	font-size: 3rem;
+	color: var(--flama);
+	padding-left: 1rem;
+}
+
+.content-shopping-cart {
+	display: flex;
+	flex-direction: column;
+	color: var(--flama);
+}
+
+/* ************* NAVBAR ************* */
+.container-navbar {
+	background-color: var(--cactus);
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+}
+
+.navbar .fa-bars {
+	display: none;
+}
+
+.menu {
+	display: flex;
+	gap: 2rem;
+	
+}
+
+.menu li {
+	list-style: none;
+	margin-right: 18px;
+}
+
+.menu a {
+	text-decoration: none;
+	font-size: 18px;
+	color: var(--hueso);
+	font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.menu a::after {
+	content: '';
+	width: 1.5rem;
+	height: 1px;
+	background-color: var(--hueso);
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.menu a:hover::after {
+	opacity: 1;
+}
+
+.menu a:hover {
+	color: var(--hueso);
+}
+
+.search-form {
+	position: relative;
+	display: flex;
+	align-items: center;
+	border: 2px solid var(--hueso);
+	border-radius: 2rem;
+	background-color: var(--hueso);
+    color: var(--hueso);
+	height: 4.4rem;
+	overflow: hidden;
+}
+
+.search-form input {
+	outline: none;
+	font-family: inherit;
+	border: none;
+	width: 25rem;
+	font-size: 1.4rem;
+	padding: 0 2rem;
+	color: #020202;
+	cursor: pointer;
+}
+
+.search-form .fa-magnifying-glass{
+    color: var(--hueso);
+}
+
+.search-form input::-webkit-search-cancel-button {
+	appearance: none;
+    color: var(--hueso);
+}
+
+.search-form .btn-search {
+	border: none;
+	background-color: var(--cactus);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 1rem;
+}
+
+.btn-search i {
+	font-size: 2rem;
+	color: var(--hueso);
+}
+
+.container-logo .fa-beer-mug-empty{
+	font-size: 3rem;
+	color: var(--hueso);
+	padding-left: 1rem;
+}
+
+
+/* ********************************** */
+/*            MAIN CONTENT            */
+/* ********************************** */
+.main-content {
+	background-color: var(--cactus);
+}
+
+/* ********************************** */
+/*              FEATURES              */
+/* ********************************** */
+.container-features {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 3rem;
+	padding: 3rem 0;
+}
+
+.card-feature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+
+	background-color: var(--hueso);
+	border-radius: 1rem;
+	padding: 1.5rem 0;
+}
+
+.card-feature i {
+	font-size: 2.7rem;
+	color: var(--hueso); /*Iconos*/
+}
+
+.feature-content {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.feature-content span {
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: var(--hueso);
+}
+
+.feature-content p { 
+	color: #000000;  /*Contenido de tarjetas*/
+	font-weight: 500;
+}
+
+/* ********************************** */
+/*             CATEGORIES             */
+/* ********************************** */
+
+.top-categories {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	margin-bottom: 3rem;
+}
+
+.container-categories {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem;
+}
+
+.card-category {
+	height: 20rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2rem;
+	gap: 2rem;
+}
+
+
+
+.category-1 {
+	background-image: linear-gradient(#00000080, #00000080),
+		url('img/categoria.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.category-expreso {
+	background-image: linear-gradient(#00000080, #00000080),
+		url('img/categoria2.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.card-category p {
+	font-size: 2.5rem;
+	color: #000000;
+	text-transform: capitalize;
+	position: relative;
+}
+
+.card-category p::after {
+	content: '';
+	width: 2.5rem;
+	height: 2px;
+	background-color: #f60101;
+	position: absolute;
+	bottom: -1rem;
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
+
+.card-category span {
+	font-size: 1.6rem;
+	color: #170202;
+	cursor: pointer;
+}
+
+.card-category span:hover {
+	color: var(--hueso);
+}
+
+/* ********************************** */
+/*            TOP PRODUCTS            */
+/* ********************************** */
+.top-products {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+.container-options {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-bottom: 1rem;
+}
+
+.container-options span {
+	color: #000000;
+	background-color: #fff;
+	padding: 0.7rem 3rem;
+	font-size: 1.4rem;
+	text-transform: capitalize;
+	border-radius: 2rem;
+	cursor: pointer;
+}
+
+.container-options span:hover {
+	background-color: var(--cactus);
+	color: #f18921f0;
+}
+
+.container-options span.active {
+	background-color: var(--primary-color);
+	color: #f18921f0;
+}
+
+/* Products */
+.container-products {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 3rem;
+}
+
+.card-product {
+	background-color: var(--hueso);
+	padding: 3rem 3rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	box-shadow: 0 0 2px rgba(228, 16, 16, 0.1);
+	max-width: 500px; /* Ejemplo de ajuste de ancho máximo */
+    margin-bottom: 5px; /* Ejemplo de ajuste de margen inferior */
+}
+
+.container-img {
+	position: relative;
+}
+
+.container-img img {
+	width: 100%;
+}
+
+.container-img .discount {
+	position: absolute;
+	left: 0;
+	background-color: var(--second-color);
+	color: #ffffff;
+	padding: 2px 1.2rem;
+	border-radius: 1rem;
+	font-size: 1.2rem;
+}
+
+.card-product:hover .discount {
+	background-color: #000000;
+}
+
+.button-group {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	position: absolute;
+	top: 0;
+	right: -3rem;
+	z-index: -1;
+	transition: all 0.4s ease;
+}
+
+.button-group span {
+	border: 1px solid var(--second-color);
+	padding: 0.8rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease;
+}
+
+.button-group span:hover {
+	background-color: var(--second-color);
+}
+
+.button-group span i {
+	font-size: 1.5rem;
+	color: var(--second-color);
+}
+
+.button-group span:hover i {
+	color: #fff;
+}
+
+.card-product:hover .button-group {
+	z-index: 0;
+	right: -1rem;
+}
+
+.content-card-product {
+	display: grid;
+	justify-items: center;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(4, min-content);
+	row-gap: 1rem;
+}
+
+.stars {
+	grid-row: 1/2;
+	grid-column: 1/-1;
+	padding-top: 20px;
+}
+
+.stars i {
+	font-size: 18px;
+	color: var(--second-color);
+}
+
+.content-card-product h3 {
+	grid-row: 2/3;
+	grid-column: 1/-1;
+	font-weight: 400;
+	font-size: 21px;
+	letter-spacing: 3px;
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+
+.content-card-product h3:hover {
+	color: var(--flama);
+}
+
+.add-cart {
+	justify-self: start;
+	border: 2px solid var(--flama);
+	padding: 15px;
+	border-radius: 40%;
+	cursor: pointer;
+	transition: all 0.4s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.add-cart:hover {
+	background-color: var(--cactus);
+}
+
+.add-cart i {
+	font-size: 28px;
+	color: var(--flama);
+}
+
+.add-cart:hover i {
+	color: #fff;
+}
+
+.content-card-product .price {
+	justify-self: end;
+	align-self: center;
+	font-size: 23px;
+	letter-spacing: 2px;
+	font-weight: 600;
+}
+
+.content-card-product .price span {
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-decoration: line-through;
+	color: #000000;
+	margin-left: 0.5rem;
+}
+
+/* ********************************** */
+/*               GALLERY              */
+/* ********************************** */
+.gallery {
+	padding-top: 30px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 30rem);
+	gap: 0rem;
+}
+
+.gallery img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.gallery-img-3 {
+	grid-column: 2/4;
+	grid-row: 1/3;
+}
+
+
+/* ********************************** */
+/*                BLOGS               */
+/* ********************************** */
+.blogs {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.container-blogs {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem;
+}
+
+.card-blog {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.card-blog .container-img {
+	border-radius: 2rem;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+.button-group-blog {
+	position: absolute;
+	bottom: 1.5rem;
+	right: -2.5rem;
+
+	display: flex;
+	gap: 0.7rem;
+	z-index: -1;
+	transition: all 0.3s ease;
+}
+
+.card-blog:hover .button-group-blog {
+	z-index: 0;
+	right: 1.5rem;
+}
+
+.button-group-blog span {
+	background-color: #ffffff;
+	padding: 1rem;
+	border-radius: 50%;
+	transition: all 0.4s ease;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button-group-blog span i {
+	font-size: 1.3rem;
+}
+
+.button-group-blog span:hover {
+	background-color: var(--primary-color);
+}
+
+.button-group-blog span:hover i {
+	color: #db1313;
+}
+
+.content-blog h3 {
+	font-size: 1.8rem;
+	margin-bottom: 1.7rem;
+	color: var(--dark-color);
+	font-weight: 500;
+}
+
+.content-blog h3:hover {
+	color: var(--primary-color);
+	
+}
+
+.content-blog p {
+	margin-top: 1rem;
+	font-size: 1.4rem;
+	color: #ffffff;
+}
+
+.content-blog span {
+	color: var(--primary-color);
+	font-size: 1.3rem;
+}
+
+.btn-read-more {
+	padding: 1rem 3rem;
+	background-color: var(--primary-color);
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	border-radius: 2rem;
+	margin: 3rem 0 5rem;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.btn-read-more:hover {
+	background-color: var(--dark-color);
+}
+
+/* ********************************** */
+/*             INFO CERVEZA           */
+/* ********************************** */
+.cerveza-section {
+	padding: 50px;
+	background-color: var(--hueso);
+	display: flex;
+    flex-direction: column; /* Establece el diseño en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+  
+  .cerveza-section h2 {
+	text-align: center;
+	margin-bottom: 50px;
+	letter-spacing: 3px;
+	font-size: 40px;
+	word-spacing: 15px;
+  }
+
+  /* Estilo para la información de la cerveza */
+  .cerveza-info {
+	display: flex;
+    align-items: center; /* Centra los elementos horizontalmente */
+	background-color: var(--second-color); /* Fondo semi-transparente */
+	text-align: justify; /* Centrar el contenido */
+  }
+  
+  .cerveza-section h3{
+	color: var(--tercer-color); /* Color del texto */
+	margin-bottom: 5px;
+	text-align: center;
+	word-spacing: 10px;
+	letter-spacing: 3px;
+	font-size: 30px;
+  }
+  .cerveza-info h3 {
+	color: var(--flama); /* Color del texto */
+	margin-bottom: 10px;
+	text-align: center;
+	word-spacing: 10px;
+	letter-spacing: 3px;
+	font-size: 30px;
+	padding-left: 50px;
+  }
+  
+  .b{
+	font-size: 25px;
+	padding: 50%;
+  }
+  .cerveza-info p{
+	flex: 0 0 50%; /* La descripción ocupará el 50% del ancho disponible */
+  }
+
+  p{
+	font-size: 24px;
+	padding-left: 100px;
+  }
+  
+  .cerveza-info img {
+	padding-left: 50px;
+	width: 400px; /* Establece el ancho de la imagen */
+    height: auto; /* Establece la altura de la imagen */
+    object-fit: cover; /* Hace que la imagen cubra el contenedor manteniendo su relación de aspecto */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+  }
+  
+  /* Agregar efecto de escala al pasar el cursor */
+  .cerveza-info img:hover {
+	transform: scale(1.1); /* Escala la imagen al 110% de su tamaño original */
+  }
+  
+  /* Estilo para la tabla de descripción de la cerveza */
+  .cerveza-table {
+	text-align: center;	
+  }
+  
+  .cerveza-table h3 {
+	font-size: 30px;
+	color: #fff; /* Color del texto */
+	margin-bottom: 30px;
+	padding-top: 30px;
+	text-align: center;
+	word-spacing: 5px;
+	letter-spacing: 3px;
+  }
+  
+  table {
+	width: 100%;
+	padding-left: 5px;
+	margin-bottom: 30px;
+	
+  }
+  
+  th, td {
+	text-align: center;
+	color: #fff;
+	padding-left: 1px;
+	padding: 15px;
+	text-align: center;
+	border-bottom: 2px solid #ddd;
+	font-size: 18px;
+	border-right: 2px solid white; /* Agrega una línea blanca a la derecha de cada celda de la cabecera */
+
+  }
+  
+  th {
+	border-right: 2px solid white; /* Agrega una línea blanca a la derecha de cada celda de la cabecera */
+	background-color: var(--flama); /* Fondo del encabezado de la tabla */
+  }
+  
+  .letrasth {
+	font-size: 25px;
+	padding-right: 50px;
+	color: #fff;
+  }
+  
+  
+  /* Estilo para los marinajes */
+  .marinajes {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 10px;
+	padding-bottom: 60px;
+  }
+  
+  .marinaje {
+	margin: 0 10px;
+	position: relative;
+  }
+  
+  .marinaje img {
+	width: 155px; /* Tamaño de la imagen del marinaje */
+	height: 155px;
+	border-radius: 50%; /* Hacer la imagen circular */
+	transition: transform 0.3s ease; /* Animación de transformación */
+  }
+  
+  .nombre-mar {
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+	padding: 5px 10px;
+	border-radius: 5px;
+	color: white;
+	font-size: 14px;
+	opacity: 0; /* Inicialmente oculto */
+	transition: opacity 0.3s ease; /* Animación de opacidad */
+  }
+  
+  .marinaje:hover .nombre-mar {
+	
+	opacity: 1; /* Mostrar el nombre del marinaje al pasar el cursor */
+  }
+  
+  .marinaje:hover  img:hover {
+	transform: scale(1.1); /* Aumentar el tamaño del marinaje al 110% */
+	
+	filter: brightness(150%); /* Cambiar el brillo al pasar el cursor */
+	/* O */
+	filter: saturate(180%); /* Cambiar la saturación al pasar el cursor */
+  }
+
+/* ********************************** */
+/*             VIDEOS GALERY          */
+/* ********************************** */
+.video-container {
+	padding-top: 50px;
+	width: auto;
+	background-color: var(--hueso);	
+	display: flex;
+	flex-wrap: nowrap;
+	text-align: center;
+	overflow-x: auto;
+  }
+  
+  .video-wrapper {
+	position: relative;
+  }
+  
+  .video {
+	width: 310px; /* Ajusta el ancho según lo necesites */
+	height: auto;
+  }
+  
+  .video-overlay {
+	position: absolute;
+	bottom: 2px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 0.5);
+	color: rgb(0, 0, 0);
+	padding: 1px 1px;
+	border-radius: 7px;
+	font-size: 16px;
+  }
+  
+  
+
+/* ********************************** */
+/*               FOOTER               */
+/* ********************************** */
+
+.footer {
+	padding-top: 25px;
+	background-color: var(--hueso);
+}
+
+.container-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	padding: 3rem;
+}
+
+.menu-footer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr) 20rem;
+	gap: 10rem;
+	justify-items: center;
+}
+
+.title-footer {
+	font-weight: 700;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.contact-info,
+.information,
+.my-account,
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+	list-style: none;
+	color: #000000;
+	font-size: 1.4rem;
+	font-weight: 300;
+}
+
+.information ul li a,
+.my-account ul li a {
+	text-decoration: none;
+	color: #000000;
+	font-weight: 300;
+}
+
+.information ul li a:hover,
+.my-account ul li a:hover {
+	color: var(--dark-color);
+}
+
+.social-icons {
+	display: flex;
+	gap: 1.5rem;
+	padding-left: 45px;
+}
+
+.social-icons span {
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-icons span i {
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+.facebook {
+	background-color: #3b5998;
+}
+
+.twitter {
+	background-color: #00acee;
+}
+
+.youtube {
+	background-color: #c4302b;
+}
+
+.pinterest {
+	background-color: #c8232c;
+}
+
+.instagram {
+	background: linear-gradient(
+		#405de6,
+		#833ab4,
+		#c13584,
+		#e1306c,
+		#fd1d1d,
+		#f56040,
+		#fcaf45
+	);
+}
+
+.whatsapp{
+	background-color: #25D366;
+}
+
+.content p {
+	font-size: 1.4rem;
+	color: #fff;
+	font-weight: 300;
+}
+
+.content input {
+	outline: none;
+	background: none;
+	border: none;
+	border-bottom: 2px solid #d2b495;
+	cursor: pointer;
+	padding: 0.5rem 0 1.2rem;
+	color: var(--dark-color);
+	display: block;
+	margin-bottom: 3rem;
+	margin-top: 2rem;
+	width: 100%;
+	font-family: inherit;
+}
+
+.content input::-webkit-input-placeholder {
+	color: #eee;
+}
+
+.content button {
+	border: none;
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 1rem 3rem;
+	border-radius: 2rem;
+	font-size: 1.4rem;
+	font-family: inherit;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.content button:hover {
+	background-color: var(--background-color);
+	color: var(--primary-color);
+}
+
+.copyright {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 2rem;
+	border-top: 2px solid #E04D2A;
+}
+
+.copyright p {
+	font-weight: 400;
+	font-size: 1.6rem;
+}
+/* ********************************** */
+/*       MEDIA QUERIES -- 768px       */
+/* ********************************** */
+@media (max-width: 768px) {
+	html {
+		font-size: 55%;
+	}
+	.header{
+		background-color: var(--hueso);
+		padding: 0px 0%;
+		justify-content: space-between;
+		z-index: 1000;
+		display: flex;
+		padding-top: 15px;
+	}
+	.logo{
+		display: flex;
+	}
+	.navigation {
+		order: -1; /* Coloca el menú a la izquierda */
+	}
+	
+	.navigation ul{
+		list-style: none;
+		padding-bottom: 0;
+	}
+	
+	.header .navigation ul li{
+		position: relative;
+		display: inline-block; /* Cambiado a inline-block */
+	}
+	
+	.header .navigation ul li a{
+		font-size: 12px;
+		font-weight:450;
+		color: var(--flama);
+		text-decoration: none;
+		padding: 10px;
+		display: block;
+		transition: all .2s ease;
+		letter-spacing: 2px;
+		margin: 0;
+	}
+	.header .navigation ul li:hover a {
+		padding: 12px;
+		background-color: var(--cactus); /* Cambiado para aplicar el color de fondo al enlace */
+		color: var(--hueso)/* Cambiado para cambiar el color del texto */
+	  }
+	  
+	  .header .navigation ul li:hover {
+		background-color: var(--tercer-color); /* Cambiado para aplicar el color de fondo al elemento li */
+		color: var(--flama); /* Cambiado para cambiar el color del texto */
+	  }
+	
+	.header .navigation ul li a:hover > ul{
+		background-color: #fff;
+		display: block; /* Cambiado de 'initial' a 'block' */
+		color: var(--cactus);
+		padding: 10px;
+	}
+	
+	.header .navigation ul li ul{
+		position: absolute;
+		top: 100%; /* Ajustado a 100% */
+		left: 0;
+		background-color: var(--hueso);
+		display: none;
+		padding: 0; /* Ajustado el padding */
+	}
+	.header .navigation ul li ul li {
+		position: relative; /* Cambiado de absolute a relative */
+		width: 100%;
+	}
+	
+	.header .navigation ul li ul li a{
+		font-size: 12px;
+		text-transform: capitalize;
+		color: #000;
+	}
+	
+	.header .navigation ul li ul li a:hover{
+		color: var(--tercer-color);
+		background-color: var(--hueso);
+	}
+	.header .navigation ul li ul li ul{
+		position: absolute;
+		top: 0;
+		right: 200px;
+	}
+	
+	.header .navigation ul li ul li{
+		margin: 0;
+		width: 100%;
+		letter-spacing: 4px;
+	}
+	
+	.hero {
+		padding: 1rem;
+	}
+
+	.customer-support {
+		display: none;
+	}
+
+	.content-shopping-cart {
+		display: none;
+	}
+
+	.navbar {
+		padding: 1rem 2rem;
+	}
+
+	.navbar .fa-bars {
+		display: block;
+		color: #fff;
+		font-size: 3rem;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.content-banner {
+		max-width: 50rem;
+		margin: 0 auto;
+		padding: 25rem 0;
+	}
+
+	.container-features {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 3rem 2rem;
+	}
+
+	.card-feature {
+		padding: 2rem;
+	}
+
+	.heading-1 {
+		font-size: 2.4rem;
+	}
+
+	.card-category {
+		height: 12rem;
+	}
+
+	.card-category p {
+		font-size: 2rem;
+		text-align: center;
+		line-height: 1;
+	}
+
+	.card-category span {
+		font-size: 1.4rem;
+	}
+
+	.container-options {
+		align-items: center;
+	}
+
+	.container-options span {
+		text-align: center;
+		padding: 1rem 2rem;
+	}
+
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+	}
+
+	.gallery {
+		grid-template-rows: repeat(2, 15rem);
+	}
+
+	.container-blogs {
+		overflow: hidden;
+		grid-template-columns: 1fr 1fr;
+
+		height: 52rem;
+	}
+
+	.menu-footer {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.copyright {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	.video-container {
+		padding-top: 50px;
+		width: auto;/* Fondo blanco para la sección de videos */
+		background-color: var(--second-color);
+		display: flex;
+		flex-wrap: nowrap;
+		text-align: center;
+		overflow-x: auto;
+	  }
+	  
+	  .video-wrapper {
+		position: relative;
+		flex-basis: 30%;
+		margin: 10px 0;
+	  }
+	  .video-wrapper {
+		  flex-basis: 80%;
+		
+	  }
+	  .video {
+		width: 200px; /* Ajusta el ancho según lo necesites */
+		height: auto;
+	  }
+
+	  /* ********************************** */
+		/*             INFO CERVEZA           */
+		/* ********************************** */
+		.cerveza-section {
+			padding: 50px;
+			background-color: var(--hueso);
+			display: flex;
+			flex-direction: column; /* Establece el diseño en columna */
+			align-items: center; /* Centra los elementos horizontalmente */
+		}
+  
+  .cerveza-section h2 {
+	text-align: center;
+	margin-bottom: 50px;
+	letter-spacing: 3px;
+	font-size: 18px;
+	word-spacing: 15px;
+  }
+
+  /* Estilo para la información de la cerveza */
+  .cerveza-info {
+	display: flex;
+    align-items: center; /* Centra los elementos horizontalmente */
+	background-color: var(--second-color); /* Fondo semi-transparente */
+	text-align: justify; /* Centrar el contenido */
+  }
+  
+  .cerveza-section h3{
+	color: var(--tercer-color); /* Color del texto */
+	margin-bottom: 5px;
+	text-align: center;
+	word-spacing: 10px;
+	letter-spacing: 3px;
+	font-size: 18px;
+  }
+  .cerveza-info h3 {
+	color: var(--flama); /* Color del texto */
+	text-align: left;
+	word-spacing: 10px;
+	letter-spacing: 3px;
+	font-size: 18px;
+	padding-left: 10px;
+  }
+  
+  .b{
+	font-size: 18px;
+	padding: 11%;
+  }
+  .cerveza-info p{
+	flex: 0 0 40%; /* La descripción ocupará el 50% del ancho disponible */
+  }
+
+  p{
+	font-size: 18px;
+	padding-left: 20px;
+  }
+  
+  .cerveza-info img {
+	padding-left: 10px;
+	width: 200px; /* Establece el ancho de la imagen */
+    height: auto; /* Establece la altura de la imagen */
+    object-fit: cover; /* Hace que la imagen cubra el contenedor manteniendo su relación de aspecto */
+    object-position: left; /* Centra la imagen dentro del contenedor */
+  }
+  
+  /* Agregar efecto de escala al pasar el cursor */
+  .cerveza-info img:hover {
+	transform: scale(1.1); /* Escala la imagen al 110% de su tamaño original */
+  }
+  
+  /* Estilo para la tabla de descripción de la cerveza */
+  .cerveza-table {
+	text-align: center;	
+  }
+  
+  .cerveza-table h3 {
+	font-size: 18px;
+	color: #fff; /* Color del texto */
+	margin-bottom: 30px;
+	padding-top: 30px;
+	text-align: center;
+	word-spacing: 5px;
+	letter-spacing: 3px;
+  }
+  
+  table {
+	width: 80%;
+	padding-left: 5px;
+	margin-bottom: 30px;
+	
+  }
+  
+  th, td {
+	text-align: center;
+	color: #fff;
+	padding-left: 1px;
+	padding: 15px;
+	text-align: center;
+	border-bottom: 2px solid #ddd;
+	font-size: 13px;
+	border-right: 2px solid white; /* Agrega una línea blanca a la derecha de cada celda de la cabecera */
+
+  }
+  
+  th {
+	border-right: 2px solid white; /* Agrega una línea blanca a la derecha de cada celda de la cabecera */
+	background-color: var(--flama); /* Fondo del encabezado de la tabla */
+  }
+  
+  .letrasth {
+	font-size: 19px;
+	padding-right:10px;
+	color: #fff;
+  }
+  
+  
+  /* Estilo para los marinajes */
+  .marinajes {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 7px;
+	padding-bottom: 60px;
+  }
+  
+  .marinaje {
+	margin: 0 10px;
+	position: relative;
+  }
+  
+  .marinaje img {
+	width: 80px; /* Tamaño de la imagen del marinaje */
+	height: 80px;
+	border-radius: 50%; /* Hacer la imagen circular */
+	transition: transform 0.3s ease; /* Animación de transformación */
+  }
+          
+  .nombre-mar {
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+	padding: 5px 10px;
+	border-radius: 5px;
+	color: white;
+	font-size: 11px;
+	opacity: 0; /* Inicialmente oculto */
+	transition: opacity 0.3s ease; /* Animación de opacidad */
+  }
+  
+  .marinaje:hover .nombre-mar {
+	opacity: 1; /* Mostrar el nombre del marinaje al pasar el cursor */
+  }
+  
+  .marinaje:hover  img:hover {
+	transform: scale(1.1); /* Aumentar el tamaño del marinaje al 110% */
+
+	filter: brightness(150%); /* Cambiar el brillo al pasar el cursor */
+	/* O */
+	filter: saturate(180%); /* Cambiar la saturación al pasar el cursor */
+  }
+	
+}
+

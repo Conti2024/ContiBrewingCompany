@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+	<link rel="icon" href="img/favicon.png" type="image/x-icon">
+	<!-- Enlace al archivo CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="contactanos.css">
+	<script src="enviar_formulario.js"></script>
+</head>
+<body>
+   <header class="header">
+      <input type="checkbox" id="toggle">
+
+      <label for="toggle"><img  class="menu" src="img/menu.png" alt="menu"></label>
+      <nav class="navigation"> 
+        <ul>
+          <li><a href="index.php">INICIO</a></li>
+          <li><a href="#">NUESTRAS CERVEZAS</a>
+            <ul>
+              <li><a href="camaleona.php">CAMALEONA</a></li>
+              <li><a href="tucana.php">TUCANA</a></li>
+            </ul>
+          </li>
+          <li><a href="contactanos.html">CONTACTANOS</a></li>
+        </ul>
+      </nav>
+  	</header>
+    <div class="contacto">
+        <div class="info">
+			<h1 class="letrasTitulo">¿QUIERES SABER MÁS?</h1> <br>
+            <p>Dirección: Guillermo Prieto 268, <br>Col. Centro, 58000 Morelia, Mich.</p>
+            <p>Teléfono: 443-312-6745</p>
+            <p>Email: ventas@fabricacatar.com</p>
+        </div>
+        <form id="registration-form" class="formulario" action="enviar_formulario.php" method="POST">
+			<h1>INFORMACIÓN DE CONTACTO</h1> <br>
+			
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" >
+			<input type="text" id="apellido" name="apellido" placeholder="Apellidos" required>
+			<input type="text" id="celular" name="celular" placeholder="Celular" required pattern="\d{10}" title="Debe contener 10 números">
+			<input type="email" id="email" name="email" placeholder="Email" required>
+
+            <textarea id="mensaje" name="coments" rows="5" required></textarea><br>
+			<button class="boton-registro" type="submit" id="submit-btn">REGISTRO</button>
+	
+		</form>
+		<div id="mensaje"></div> <!-- Aquí se mostrará el mensaje de confirmación -->
+	</div>
+	<br>
+		<div class="container py-5">
+			<h1 class="text-center mb-4">NUESTROS PUNTOS DE VENTA</h1>
+			<div class="row justify-content-center">
+
+				<div class="col-md-4 mb-4">
+					<div class="card h-100 position-relative">
+						<img src="img/oneDolar1.jpg" class="card-img-top" alt="Punto de Venta 1">
+						<div class="card-body">
+							<h2 class="text-center card-title">ONE DOLLAR</h2>
+							<!-- <p class="card-text">Dirección: Av Acueducto 285, Vasco de Quiroga, 58230 Morelia, Mich.</p> -->
+							<p class="card-text">¿Buscas algo diferente? 
+								Prueba nuestras cervezas artesanales -Tucana y Camaleona- y déjate sorprender por su grande 
+								sabore. Una experiencia cervecera que te
+								llevará a un nuevo nivel.</p>
+								<div class="text-center">
+									<a href="https://www.google.com/maps/search/One+Dollar/@19.6982285,-101.1831903,15z/data=!3m1!4b1?entry=ttu" class="btn btn-primary" target="_blank">Ver Ubicación</a>
+								</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 mb-4">
+					<div class="card h-100 position-relative">
+						<img src="img/PadelBros.jpg" class="card-img-top" alt="Punto de Venta 2">
+						<div class="card-body">
+							<h2 class="text-center card-title">Pádel Bros Club</h2>
+							<!--<p class="card-text">Dirección: Villas del Monte 511, 58090 Morelia, Mich.</p><br>-->
+							<p class="card-text">¡Descubre el sabor único de nuestra cerveza artesanal! 
+								Elaborada con ingredientes seleccionados y un proceso de producción cuidadoso, cada sorbo es una experiencia inolvidable.</p>
+							<div class="text-center">
+								<a href="https://maps.app.goo.gl/E1jnAzySAito9JtC7" class="btn btn-primary" target="_blank">Ver Ubicación</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 mb-4">
+					<div class="card h-100 position-relative">
+						<img src="img/tantoPatio.jpeg" class="card-img-top" alt="Punto de Venta 1">
+						<div class="card-body">
+							<h2 class="text-center card-title">Tanto Patio</h2>
+							<!-- <p class="card-text">Dirección: Av Acueducto 285, Vasco de Quiroga, 58230 Morelia, Mich.</p> -->
+							<p class="card-text">¿Buscas algo diferente? 
+								Prueba nuestras cervezas artesanales -Tucana y Camaleona- y déjate sorprender por su grande sabor. Una experiencia cervecera que te
+								llevará a un nuevo nivel.</p>
+							<div class="text-center">
+								<a href="https://maps.app.goo.gl/qRoNLSddh6yWSRcY7" class="btn btn-primary" target="_blank">Ver Ubicación</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 mb-4">
+					<div class="card h-100 position-relative">
+						<img src="img/macazaga.jpg" class="card-img-top" alt="Punto de Venta 1">
+						<div class="card-body">
+							<h2 class="text-center card-title">Macazaga Cava & Grill</h2>
+							<!-- <p class="card-text">Dirección: Av Acueducto 285, Vasco de Quiroga, 58230 Morelia, Mich.</p> -->
+							<p class="card-text">¿Buscas algo diferente? 
+								Prueba nuestras cervezas artesanales -Tucana y Camaleona- y déjate sorprender por su grande 
+								sabor. Una experiencia cervecera que te
+								llevará a un nuevo nivel.</p>
+							<div class="text-center">
+									<a href="https://maps.app.goo.gl/qRoNLSddh6yWSRcY7" class="btn btn-primary" target="_blank">Ver Ubicación</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 mb-4">
+					<div class="card h-100 position-relative">
+						<img src="img/cielo.jpg" class="card-img-top" alt="Punto de Venta 2">
+						<div class="card-body">
+							<h2 class="text-center card-title">Cielo Cocina Fusión</h2>
+							<!--<p class="card-text">Dirección: 58280, Terraza, Blvd. García de León 700, Nueva Chapultepec, 58280 Morelia, Mich.</p>-->
+							<p class="card-text">¡Descubre el sabor único de nuestra cerveza artesanal! 
+								Elaborada con ingredientes seleccionados y un proceso de producción cuidadoso, cada sorbo es una experiencia inolvidable.</p>
+							<div class="text-center">
+								<a href="https://maps.app.goo.gl/S1Q3LhWtzFcYPosG7" class="btn btn-primary" target="_blank">Ver Ubicación</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 mb-4">
+					<div class="card h-100 position-relative">
+						<img src="img/rincondevilla.jpg" class="card-img-top" alt="Punto de Venta 2">
+						<div class="card-body">
+							<h2 class="text-center card-title">Rincón de Villa</h2>
+							<!--<p class="card-text">Dirección:  Carretera Mil Cumbres, 61313 Mich.</p><br>-->
+							<p class="card-text">Haz de cada encuentro una celebración con nuestras cervezas artesanales. Encuentra la tuya en nuestros puntos de venta y brinda por momentos inolvidables</p>
+							<div class="text-center">
+								<a href="https://maps.app.goo.gl/11G99S3BbgdrXnP18" class="btn btn-primary" target="_blank">Ver Ubicación</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 mb-4">
+					<div class="card h-100 position-relative">
+						<img src="img/hotelQuintaSauz2.jpg" class="card-img-top" alt="Punto de Venta 1">
+						<div class="card-body">
+							<h2 class="text-center card-title">Quinta Sauz</h2>
+							<!-- <p class="card-text">Dirección: Av Acueducto 285, Vasco de Quiroga, 58230 Morelia, Mich.</p> -->
+							<p class="card-text">¿Buscas algo diferente? 
+								Prueba nuestras cervezas artesanales -Tucana y Camaleona- y déjate sorprender por su grande 
+								sabor. Una experiencia cervecera que te
+								llevará a un nuevo nivel.</p>
+							<div class="text-center">
+								<a href="https://maps.app.goo.gl/ngxK8zVP8NBZfhdd9" class="btn btn-primary" target="_blank">Ver Ubicación</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 mb-4">
+					<div class="card h-100 position-relative">
+						<img src="img/LaGuarecita.jpg" class="card-img-top" alt="Punto de Venta 2">
+						<div class="card-body">
+							<h2 class="text-center card-title">La Guarecita</h2>
+						   	<!-- <p class="card-text">Dirección: García Obeso 185, Centro, 58000 Morelia, Mich.</p>-->
+							<p class="card-text">Haz de cada encuentro una celebración con nuestras cervezas artesanales. Encuentra la tuya en nuestros puntos de venta y brinda por momentos inolvidables</p>
+							<div class="text-center">
+								<a href="https://www.google.com/maps/search/la+guarecita+morelia/@19.7048411,-101.1957283,15z/data=!3m1!4b1?entry=ttu" class="btn btn-primary" target="_blank">Ver Ubicación</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 mb-4">
+					<div class="card h-100 position-relative">
+						<img src="img/HotelHorizon.jpg" class="card-img-top" alt="Punto de Venta 2">
+						<div class="card-body">	
+							<h2 class="text-center card-title">Horizon Hotel</h2>
+							<!--<p class="card-text">Dirección: Perif. Paseo de la República 3325, Pob. Ocolusen, 58270 Morelia, Mich.</p>-->
+							<p class="card-text">Haz de cada encuentro una celebración con nuestras cervezas artesanales. Encuentra la tuya en nuestros puntos de venta y brinda por momentos inolvidables</p>
+							<div class="text-center">
+								<a href="https://maps.app.goo.gl/LWxp1eqqJ3Y4Qyhs7" class="btn btn-primary" target="_blank">Ver Ubicación</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+         
+		<!--<iframe id="mapa" class="mapa-container" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7512.495720781735!2d-101.1977869!3d19.7020689!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842d0f5d4c8e76c3%3A0xb8f37ad80c7a74f9!2sConti%20Papeler%C3%ADas!5e0!3m2!1sen!2smx!4v1710883925903!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br> <br> <br> -->
+     
+    <footer class="footer">
+			<div class="container container-footer">
+				<div class="menu-footer">
+					<div class="contact-info">
+						<p class="title-footer">Información de Contacto</p>
+						<ul>
+							<li>Dirección: Guillermo Prieto 268, Col. Centro, 58000 Morelia, Mich.</li>
+							<li>Teléfono: 443-312-6745</li>
+							<li>Email: ventas@fabricacatar.com</li>
+						</ul>
+						
+						<div class="social-icons">
+							<a href="https://m.facebook.com/profile.php?id=100088711789963&_rdr" class="link" target="_blank">
+								<span class="facebook">
+								  <i class="fa-brands fa-facebook-f"></i>
+								</span>
+							</a>
+							</span>
+							<a href="https://www.instagram.com/contibrewingcompany?igsh=eWV2andkeHFpcHc4" class="link" target="_blank">
+								<span class="instagram">
+								  <i class="fa-brands fa-instagram"></i>
+								</span>
+							</a>
+							<a href="" class="link" target="_blank">
+								<span class="whatsapp">
+									<i class="fa-brands fa-whatsapp"></i>
+								</span>
+							</a>
+							  
+						</div>
+					</div>
+
+					<div class="information">
+						<p class="title-footer">Información</p>
+						<ul>
+							<li><a href="sobreNosotros.html">Acerca de Nosotros</a></li>
+							<li><a href="politicasPrivacidad.html">Politicas de Privacidad</a></li>
+							<li><a href="terminosCondiciones.html">Términos y condiciones</a></li>
+							<li><a href="contactanos.html">Contactános</a></li>
+						</ul>
+					</div>
+
+					<div class="my-account">
+						<p class="title-footer">Mi cuenta</p>
+
+						<ul>
+							<li><a href="iniciarsesion.html" target="_blank">Mi cuenta</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="copyright">
+					<p>
+						&copy; 2024 - Conti Brewing Company
+					</p>
+				</div>
+			</div>
+		</footer>
+    <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+ 
+</body>
+</html>
+
+
+

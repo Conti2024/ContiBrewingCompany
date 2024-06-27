@@ -1,0 +1,255 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body{
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-color: #fcfcfc;
+	--background-color: #000000;
+	--second-color: #000000;
+
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+  
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+.heading-1 {
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
+	color: var(--primary-color);
+
+}
+.contacto {
+  max-width: 1000px;
+  margin: 20px auto;
+  margin-top: 5px;
+  background-color: #000; /* Negro */
+  color: #fff; /* Blanco */
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+
+.nosotros{
+	width: 100%;
+	background: var(--primary-color);
+	text-align:center;
+	font-size: 2rem;
+	color: var(--second-color);
+	padding-left: 15px;
+    padding-right: 15px;
+	line-height: 2;
+}
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  section h2 {
+    color: #333;
+  }
+  
+  section p {
+    color: #666;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    color: #666;
+  }
+  
+  ul li:before {
+    content: "\2022"; /* Agrega un punto de bala */
+    color: #333;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+
+  .header{
+    background-color: var(--second-color);
+    padding: 0px 0%;
+    justify-content: space-between;
+    z-index: 1000;
+    display: flex;
+    padding-top: 15px;
+    text-align: center;
+  }
+  .logo{
+    display: flex;
+  }
+
+  .container-hero {
+    background-color: var(--segundo-color);
+  }
+  
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  .container-user {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+  }
+  
+  .container-user .fa-user {
+    font-size: 3rem;
+    color: var(--primary-color);
+    padding-right: 2.5rem;
+    border-right: 1px solid #ffffff;
+  }
+  
+  .container-user .fa-cart-shopping{
+    font-size: 3rem;
+    color: var(--primary-color);
+    padding-left: 1rem;
+  }
+  
+  .content-shopping-cart {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @keyframes flash {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+  }
+  
+  .flash-cart {
+      animation: flash 0.5s ease;
+  }
+  
+
+
+.navigation {
+      order: -1; /* Coloca el menú a la izquierda */
+  }
+  
+  .navigation ul{
+    list-style: none;
+    padding-bottom: 0;
+  }
+  
+  .header .navigation ul li{
+    position: relative;
+    display: inline-block; /* Cambiado a inline-block */
+  }
+  
+  .header .navigation ul li a{
+    font-size: 16px;
+    font-weight:450;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    transition: all .2s ease;
+    letter-spacing: 4px;
+    margin: 0;
+  }
+  .header .navigation ul li:hover a {
+    padding: 15px;
+    background-color: var(--primary-color); /* Cambiado para aplicar el color de fondo al enlace */
+    color: var(--segundo-color)/* Cambiado para cambiar el color del texto */
+    }
+    
+    .header .navigation ul li:hover {
+    background-color: var(--tercer-color); /* Cambiado para aplicar el color de fondo al elemento li */
+    color: var(--second-color); /* Cambiado para cambiar el color del texto */
+    }
+  
+  .header .navigation ul li a:hover > ul{
+    background-color: #fff;
+    display: block; /* Cambiado de 'initial' a 'block' */
+    color: var(--segundo-color);
+    padding: 15px;
+  }
+  
+  .header .navigation ul li ul{
+    position: absolute;
+    top: 100%; /* Ajustado a 100% */
+    left: 0;
+    background-color: var(--primary-color);
+    display: none;
+    padding: 0; /* Ajustado el padding */
+  }
+  .header .navigation ul li ul li {
+    position: relative; /* Cambiado de absolute a relative */
+    width: 100%;
+  }
+  
+  .header .navigation ul li ul li a{
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #d90f0f;
+  }
+  
+  .header .navigation ul li ul li a:hover{
+    color: var(--primary-color);
+    background-color: var(--segundo-color);
+  }
+  .header .navigation ul li ul li ul{
+    position: absolute;
+    top: 0;
+    right: 300px;
+  }
+  
+  .header .navigation ul li ul li{
+    margin: 0;
+    width: 100%;
+    letter-spacing: 4px;
+  }
+  
+  .header .navigation ul li:hover > ul{
+    display: initial
+  }
+  
+  #toggle,
+  .header label{
+    display: none;
+    cursor: pointer;
+  }
+  
+  .menu{
+    width: 45px;
+    height: 45px;
+  }
+  
+
+  

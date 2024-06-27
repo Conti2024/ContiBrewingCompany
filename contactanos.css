@@ -1,0 +1,866 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body{
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-color: #fcfcfc;
+	--background-color: #000000;
+	--second-color: #000000;
+
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+  
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 1000;
+  cursor: pointer;
+}
+.whatsapp-btn:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+/* ********************************** */
+/*             UTILIDADES             */
+/* ********************************** */
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+.heading-1 {
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
+	color: var(--primary-color);
+
+}
+.contacto {
+  max-width: 100%;
+  background-color: #000; /* Negro */
+  color: #fff; /* Blanco */
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 5px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+
+.nosotros{
+	width: 100%;
+	background: var(--primary-color);
+	text-align:center;
+	font-size: 2rem;
+	color: var(--second-color);
+	padding-left: 15px;
+    padding-right: 15px;
+	line-height: 2;
+}
+
+.info {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.mapa-container {
+  display: flex;
+  justify-content: center;
+}
+
+#mapa {
+  height: 250px;
+  width: 50%;
+  margin: 0 auto; /* Margen automático para centrar horizontalmente */
+}
+:root {
+  --primary-color: #fcfcfc;
+  --tercer-color: #000000;
+  --segundo-color: #000000;
+
+}
+
+
+ 
+  
+  
+/* ********************************** */
+/*               HEADER               */
+/* ********************************** */
+
+.header{
+	background-color: var(--second-color);
+	padding: 0px 0%;
+	justify-content: space-between;
+	z-index: 1000;
+	display: flex;
+	padding-top: 15px;
+}
+.logo{
+	display: flex;
+}
+.navigation {
+  padding-left: 18px;
+    order: -1; /* Coloca el menú a la izquierda */
+}
+
+.navigation ul{
+list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header .navigation ul li{
+	position: relative;
+	display: inline-block; /* Cambiado a inline-block */
+}
+
+.header .navigation ul li a{
+	font-size: 16px;
+	font-weight:450;
+	color: var(--primary-color);
+	text-decoration: none;
+	padding: 15px;
+	display: block;
+	transition: all .2s ease;
+	letter-spacing: 4px;
+	margin: 0;
+}
+.header .navigation ul li:hover a {
+	padding: 15px;
+	background-color: var(--primary-color); /* Cambiado para aplicar el color de fondo al enlace */
+	color: var(--second-color)/* Cambiado para cambiar el color del texto */
+  }
+  
+  .header .navigation ul li:hover {
+	background-color: var(--primary-color); /* Cambiado para aplicar el color de fondo al elemento li */
+	color: var(--primary-color); /* Cambiado para cambiar el color del texto */
+  }
+
+.header .navigation ul li a:hover > ul{
+	background-color: #c33e3e;
+	display: block; /* Cambiado de 'initial' a 'block' */
+	color: var(--second-color);
+	padding: 15px;
+}
+
+.header .navigation ul li ul{
+	position: absolute;
+	top: 100%; /* Ajustado a 100% */
+	left: 0;
+	background-color: var(--hueso);
+	display: none;
+	padding: 0; /* Ajustado el padding */
+}
+.header .navigation ul li ul li {
+	position: relative; /* Cambiado de absolute a relative */
+	width: 100%;
+}
+
+.header .navigation ul li ul li a{
+	font-size: 15px;
+	text-transform: capitalize;
+	color: #000000;
+}
+
+.header .navigation ul li ul li a:hover{
+	color: var(--primary-color);
+	background-color: var(--second-color);
+}
+.header .navigation ul li ul li ul{
+	position: absolute;
+	top: 0;
+	right: 300px;
+}
+
+.header .navigation ul li ul li{
+	margin: 0;
+	width: 100%;
+	letter-spacing: 4px;
+}
+
+.header .navigation ul li:hover > ul{
+	display: initial
+}
+
+#toggle,
+.header label{
+	display: none;
+	cursor: pointer;
+}
+
+.menu{
+	width: 45px;
+	height: 45px;
+}
+
+.container-hero {
+	background-color:  var(--second-color);
+	display:flex;
+	justify-content: flex-end;
+	padding-right: 60px;
+
+}
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+.customer-support {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.customer-support i {
+	font-size: 3.3rem;
+}
+
+.content-customer-support {
+	display: flex;
+	flex-direction: column;
+}
+
+.container-logo {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.container-logo i {
+	font-size: 3rem;
+}
+
+.container-logo h1 a {
+	text-decoration: none;
+	color: var(--hueso);
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+.container-user {
+	display: flex;
+	gap: 1rem;
+	cursor: pointer;
+	align-items: center;
+}
+
+.container-user .fa-user {
+	font-size: 3rem;
+	color: var(--flama);
+	padding-right: 2.5rem;
+	border-right: 1px solid var(--flama);
+}
+
+.container-user .fa-basket-shopping {
+	font-size: 3rem;
+	color: var(--flama);
+	padding-left: 1rem;
+}
+
+.content-shopping-cart {
+	display: flex;
+	flex-direction: column;
+	color: var(--flama);
+}
+  
+.menu {
+	display: flex;
+	gap: 2rem;
+	
+}
+
+.menu li {
+	list-style: none;
+	margin-right: 18px;
+}
+
+.menu a {
+	text-decoration: none;
+	font-size: 18px;
+	color: var(--hueso);
+	font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.menu a::after {
+	content: '';
+	width: 1.5rem;
+	height: 1px;
+	background-color: var(--hueso);
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.menu a:hover::after {
+	opacity: 1;
+}
+
+.menu a:hover {
+	color: var(--hueso);
+}
+
+/* ********************************** */
+/*               FOOTER               */
+/* ********************************** */
+
+.footer {
+	padding-top: 250x;
+	background-color: var(--second-color);
+}
+
+.container-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	padding: 3rem;
+}
+
+.menu-footer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr) 20rem;
+	gap: 10rem;
+	justify-items: center;
+}
+
+.title-footer {
+	font-weight: 700;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.contact-info,
+.information,
+.my-account,
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+	list-style: none;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: lighter;
+}
+
+.information ul li a,
+.my-account ul li a {
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bolder;
+}
+
+.information ul li a:hover,
+.my-account ul li a:hover {
+	color: #eb7a10;
+}
+
+.social-icons {
+	display: flex;
+	gap: 1.5rem;
+	text-decoration: none;
+	padding-left: 45px;
+}
+
+.social-icons span {
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+
+.social-icons span i {
+	color: #fff;
+	font-size: 1.2rem;
+	text-decoration: none;
+}
+
+.link{
+	text-decoration: none;
+}
+
+.facebook {
+	background-color: #3b5998;
+}
+
+.twitter {
+	background-color: #00acee;
+}
+
+.youtube {
+	background-color: #c4302b;
+}
+
+.pinterest {
+	background-color: #c8232c;
+}
+
+.instagram {
+	background: linear-gradient(
+		#405de6,
+		#833ab4,
+		#c13584,
+		#e1306c,
+		#fd1d1d,
+		#f56040,
+		#fcaf45
+	);
+}
+
+.whatsapp{
+	background-color: #25D366;
+}
+
+.content p {
+	font-size: 1.4rem;
+	color: #fff;
+	font-weight: 300;
+}
+
+.content input {
+	outline: none;
+	background: none;
+	border: none;
+	border-bottom: 2px solid #d2b495;
+	cursor: pointer;
+	padding: 0.5rem 0 1.2rem;
+	color: var(--dark-color);
+	display: block;
+	margin-bottom: 3rem;
+	margin-top: 5rem;
+	width: 100%;
+	font-family: inherit;
+}
+
+.content input::-webkit-input-placeholder {
+	color: #eee;
+}
+
+.content button {
+	border: none;
+	background-color: #ffffff;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 1rem 3rem;
+	border-radius: 2rem;
+	font-size: 1.4rem;
+	font-family: inherit;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.content button:hover {
+	background-color: var(--background-color);
+	color: var(--primary-color);
+}
+
+.copyright {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 2rem;
+
+	border-top: 1px solid #d2b495;
+}
+
+.copyright p {
+	font-weight: 400;
+	font-size: 1.6rem;
+}
+
+
+
+
+/* Estilos para superposición de texto */
+.card:hover .overlay {
+    opacity: 1;
+}
+.card-body{
+	background-color: #ffffff;
+}
+
+.card-text {
+    color: #000000; /* Color del texto */
+    font-size: 13px;
+    text-align: justify;  
+}
+.card-title {
+	font-size: 22px;
+    color: rgb(0, 0, 0); /* Establecer el color del texto en negro */
+}
+/* Estilos para botones */
+.btn-primary {
+	font-size: 12px;
+	color: #000000;
+    background-color: #f4f4f4; /* negro */
+    border-color: #000; /* negro */
+	
+}
+
+.btn-primary:hover {
+    background-color: #000000; /* blanco */
+    color: #ffffff; /* negro */
+}
+
+
+/* Efecto de zoom */
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1); /* Ajusta el valor para cambiar el nivel de zoom */
+}
+
+/* Justificar el texto en card-text */
+.card-text {
+    text-align: justify;
+}
+.text-center.mb-4 {
+    font-size: 36px;
+	padding-top: 10px; /* Cambia el tamaño del texto según tus preferencias */
+}
+
+/* ********************************** */
+/*               FORM                 */
+/* ********************************** */
+
+form {
+	background-color: rgba(241, 236, 236, 0.8); /* Color de fondo con transparencia */
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+	max-width: 400px;
+	margin: 0 auto;
+	width: 40%;
+}
+.formulario {
+    background-color: transparent; /* Hacer el formulario transparente */
+    border: 2px solid #ffffff; /* Establecer un borde azul */
+    padding: 20px; /* Agregar un espacio interno */
+    border-radius: 10px; /* Añadir bordes redondeados */
+}
+
+/* Estilos para los campos de entrada y etiquetas */
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000; /* Borde azul */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para el botón de enviar */
+.formulario input[type="submit"] {
+    background-color: #ffffff; /* Fondo azul */
+    color: rgb(0, 0, 0); /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+}
+
+/* Estilos adicionales para el botón de enviar al pasar el ratón sobre él */
+.formulario input[type="submit"]:hover {
+    background-color: #E04D2A;
+	 color: #ffffff;/* Cambia el color de fondo al pasar el ratón */
+}
+
+label {
+	font-weight:inherit;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+	width: 50%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+input[type="submit"] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+input[type="submit"]:hover {
+	background-color: #45a049;
+}
+
+.info {
+    width: 45%; /* Ajusta el ancho según tu preferencia */
+	padding-top: 10%;
+}
+
+.letrasTitulo{
+	letter-spacing: 5px;
+}
+ .boton-registro{
+	font-size: 19px;
+	background-color: #ffffff;
+	padding: 10px;
+	letter-spacing: 3px;
+	border-radius: 10px;
+ }
+
+ .boton-registro:hover{
+	background-color: #000000;
+	color: #ffffff;
+ }
+
+.mensaje-exito {
+	padding-top: 15px;
+	font-size: 15px;
+	text-align: center;
+	color: rgb(2, 1, 1);
+  }
+  
+  .mensaje-error {
+	color: rgb(252, 3, 3);
+	padding-top: 15px;
+	font-size: 15px;
+	text-align: center;
+  }
+  
+  button.loading {
+	cursor: wait; 
+  }
+
+
+
+  /* Estilos para dispositivos pequeños */
+
+  
+@media (max-width: 768px) {
+    .formulario {
+        width: 100%; /* Reducir el ancho del formulario */
+    }
+
+    .card {
+        width: 100%; /* Hacer que las tarjetas ocupen todo el ancho */
+        margin-bottom: 20px; /* Agregar un espacio entre las tarjetas */
+    }
+	.header{
+		background-color: var(--second-color);
+		padding: 0px 0%;
+		justify-content: space-between;
+		z-index: 1000;
+		display: flex;
+		padding-top: 10px;
+	}
+	.logo{
+		display: flex;
+	}
+	.navigation {
+	  padding-left: 10px;
+		order: -1; /* Coloca el menú a la izquierda */
+	}
+	
+	.navigation ul{
+	list-style: none;
+	  padding: 0;
+	  margin: 0;
+	}
+	
+	.header .navigation ul li{
+		position: relative;
+		display: inline-block; /* Cambiado a inline-block */
+	}
+	
+	.header .navigation ul li a{
+		font-size: 12px;
+		font-weight:450;
+		color: var(--primary-color);
+		text-decoration: none;
+		padding: 11px;
+		display: block;
+		transition: all .2s ease;
+		letter-spacing: 3px;
+		margin: 0;
+	}
+	.header .navigation ul li:hover a {
+		padding: 11px;
+		background-color: var(--primary-color); /* Cambiado para aplicar el color de fondo al enlace */
+		color: var(--second-color)/* Cambiado para cambiar el color del texto */
+	  }
+	  
+	  .header .navigation ul li:hover {
+		background-color: var(--primary-color); /* Cambiado para aplicar el color de fondo al elemento li */
+		color: var(--primary-color); /* Cambiado para cambiar el color del texto */
+	  }
+	
+	.header .navigation ul li a:hover > ul{
+		background-color: #c33e3e;
+		display: block; /* Cambiado de 'initial' a 'block' */
+		color: var(--second-color);
+		padding: 15px;
+	}
+	
+	.header .navigation ul li ul{
+		position: absolute;
+		top: 100%; /* Ajustado a 100% */
+		left: 0;
+		background-color: var(--hueso);
+		display: none;
+		padding: 0; /* Ajustado el padding */
+	}
+	.header .navigation ul li ul li {
+		position: relative; /* Cambiado de absolute a relative */
+		width: 100%;
+	}
+	
+	.header .navigation ul li ul li a{
+		font-size: 12px;
+		text-transform: capitalize;
+		color: #000000;
+	}
+	
+	.header .navigation ul li ul li a:hover{
+		color: var(--primary-color);
+		background-color: var(--second-color);
+	}
+	.header .navigation ul li ul li ul{
+		position: absolute;
+		top: 0;
+		right: 300px;
+	}
+	
+	.header .navigation ul li ul li{
+		margin: 0;
+		width: 100%;
+		letter-spacing: 4px;
+	}
+	
+	.header .navigation ul li:hover > ul{
+		display: initial
+	}
+	
+
+	.contacto {
+		max-width: 100%;
+		background-color: #000; /* Negro */
+		color: #fff; /* Blanco */
+		text-align: center;
+		font-size: 12px;
+		letter-spacing: 5px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		display: flex;
+		justify-content: space-between;
+	  }
+	  .container {
+		  max-width: 50rem;
+		  margin: 0 auto;
+	  }
+
+	  form {
+		background-color: rgba(241, 236, 236, 0.8); /* Color de fondo con transparencia */
+		padding: 20px;
+		border-radius: 8px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+		max-width: 200px;
+		margin: 0 auto;
+		width: 40%;
+	}
+	h1{
+		font-size: 15px;
+	}
+	
+/* Efecto de zoom */
+.card-img-top {
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto; /* Esto centrará horizontalmente la imagen */
+    max-width: 70%; /* Esto hará que la imagen sea responsiva y no exceda el ancho del contenedor */
+}
+
+.card-img-top:hover {
+    transform: scale(1.1); /* Ajusta el valor para cambiar el nivel de zoom */
+}
+
+/* Justificar el texto en card-text */
+.card-text {
+    text-align: justify;
+}
+.text-center.mb-4 {
+    font-size: 20px;
+	padding-top: 8px; /* Cambia el tamaño del texto según tus preferencias */
+}
+.card-body{
+	text-align: center;
+	align-items: center;
+}
+}
+
+.card-body{
+	text-align: center;
+	align-items: center;
+}
+
+
+
+

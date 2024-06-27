@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Edad</title>
+    <link rel="stylesheet" href="verificacion.css">
+    <title>CONTI BREWING COMPANY</title>
+		<link rel="icon" href="img/favicon.png" type="image/x-icon">
+        <link href="https://db.onlinewebfonts.com/c/6ac6309ef9ee4d4d0d34e3d878c8d9f0?family=MicrobrewSoftOne" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>BIENVENIDOS</h1>
+        <h2>¿Eres mayor de edad?</h2>
+        <div class="buttons">
+            <button class="no" onclick="verificarEdad('si')">Sí</button>
+            <button class="si" onclick="openModal()">No</button>
+        </div>
+    </div>
+     <!-- Modal -->
+     <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarPagina()">&times;</span>
+            <p>Lo sentimos, en Conti Brewing Company nos preocupamos por ti. Debes ser mayor de 18 años para ingresar a esta página.</p>
+        </div>
+    </div>
+    <script src="verificar_edad.js"></script>
+</body>
+</html>

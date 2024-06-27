@@ -1,0 +1,18 @@
+{
+    "name": "conti/pagina-cerveza",
+    "description": "Descripción de tu proyecto",
+    "authors": [
+        {
+            "name": "Conti",
+            "email": "contiprogra@email.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Conti\\PaginaCerveza\\": "src/"
+        }
+    }
+}

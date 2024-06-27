@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección de Cerveza Artesanal</title>
+    <link rel="stylesheet" href="blog.css"> <!-- Agrega tus estilos CSS aquí -->
+</head>
+<body>
+
+<div class="cerveza-section">
+    <h2>¡Descubre Nuestra Cerveza Artesanal!</h2>
+    
+    <div class="cerveza-info">
+        <h3>CERVEZA ARTESANAL CAMALEONA</h3>
+        <img src="img/GALERIA/camaleonaG33.png" alt="Mi Cerveza Artesanal">
+        <p><b class="b">DESCRIPCIÓN: </b>Camaleona es una cerveza rubia,
+            ligeramente amarga con
+            presencia de notas maltosas,
+            es refrescante y fácil de
+            beber.</p>
+        <p><b class="b">SRM</b> (Método de Referencia Estándar): <b>48</b></p>
+        <p><b class="b">IBU</b> (Unidades de Amargor Internacional): <b>50</b></p>
+    </div>
+</div>
+    <div class="cerveza-table">
+        <h3>TABLA DESCRIPCIÓN DE LA CERVEZA</h3>
+        <table>
+            <tr>
+                <th class="letrasth">SABOR</th>
+                <th class="letrasth">COLOR</th>
+                <th class="letrasth">SRM</th>
+                <th class="letrasth">IBU</th>
+            </tr>
+            <tr>
+                <td>Ligeramente Amarga</td>
+                <td>Dorado | Rubia</td>
+                <td><b>48</b></td>
+                <td><b>50</b></td>
+            </tr>
+            <!-- Agrega más filas según sea necesario -->
+        </table>
+
+        
+        <h3>MARINAJE IDEAL</h3>
+        <div class="marinajes">
+        <div class="marinaje">
+            <img src="img/ensalada.jpg" alt="Marinaje 1">
+            <div class="nombre-mar">
+                <span>Ensaladas</span>
+            </div>
+        </div>
+        <div class="marinaje">
+            <img src="img/pescado-parrilla.jpg" alt="Marinaje 2">
+            <div class="nombre-mar">
+                <span>Pescado a la parrilla</span>
+            </div>
+        </div>
+        <div class="marinaje">
+            <img src="img/polloplancha.jpg" alt="Marinaje 2">
+            <div class="nombre-mar">
+                <span>Pollo a la plancha</span>
+            </div>
+        </div>
+        <div class="marinaje">
+            <img src="img/pulpo.jpg" alt="Marinaje 2">
+            <div class="nombre-mar">
+                <span>Mariscos</span>
+            </div>
+        </div>
+         <div class="marinaje">
+            <img src="img/quesos.jpg" alt="Marinaje 2">
+            <div class="nombre-mar">
+                <span>Quesos semiduros
+                </span>
+            </div>
+        </div>
+        <!-- Agrega más divs para más marinajes -->
+    </div>
+</div>
+
+<!-- VIDEOS-->
+<div class="video-container">
+    <div class="video-wrapper">
+        <video class="video" autoplay muted loop>
+            <source src="img/VidesoCervezaproceso/IMG_1472.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <div class="video-overlay">PROCESO</div>
+    </div>
+    <div class="video-wrapper">
+        <video class="video" autoplay muted loop>
+            <source src="img/VidesoCervezaproceso/IMG_1475.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <div class="video-overlay">PROCESO</div>
+    </div>
+    <div class="video-wrapper">
+        <video class="video" autoplay muted  loop>
+            <source src="img/VidesoCervezaproceso/IMG_1497.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <div class="video-overlay">Texto</div>
+    </div>
+    <div class="video-wrapper">
+        <video class="video" autoplay muted  loop>
+            <source src="img/VidesoCervezaproceso/IMG_1586.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <div class="video-overlay">Texto</div>
+    </div>
+    <div class="video-wrapper">
+        <video class="video" autoplay muted  loop >
+            <source src="img/VidesoCervezaproceso/IMG_1498-8.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <div class="video-overlay">Texto</div>
+    </div>
+</div>
+<!--  END VIDEOS-->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="blog.js"></script>
+<script>
+    var videos = document.querySelectorAll('.video');
+    videos.forEach(function(video, index) {
+        video.addEventListener('ended', function() {
+            var nextIndex = (index + 1) % videos.length;
+            videos[nextIndex].play();
+        });
+    });
+</script>
+</body>
+</html>

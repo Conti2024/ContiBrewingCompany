@@ -1,0 +1,200 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+html {
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root {
+	--primary-color: #EFB94A;
+	--second-color: #F1E3C5;
+    --tercer-color: #416BB2;
+}
+/* Estilo para la sección de cerveza */
+.cerveza-section {
+  padding: 50px;
+  background-color: #f7f7f7;
+}
+
+.cerveza-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 3px;
+  font-size: 40px;
+  word-spacing: 15px;
+
+}
+
+/* Estilo para la información de la cerveza */
+/* styles.css */
+
+/* Estilo para la información de la cerveza */
+.cerveza-info {
+  background-color: var(--second-color); /* Fondo semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--primary-color); /* Sombra */
+  margin-bottom: 30px;
+  text-align: center; /* Centrar el contenido */
+
+}
+
+.cerveza-info h3 {
+  color: var(--primary-color); /* Color del texto */
+  margin-bottom: 25px;
+  text-align: center;
+  word-spacing: 10px;
+  letter-spacing: 3px;
+  font-size: 30px;
+}
+
+.b{
+  font-size: 20px;
+}
+p{
+  font-size: 18px;
+}
+
+.cerveza-info img {
+  text-align: center;
+  width: 280px; /* Tamaño de la imagen */
+  height: 350px;
+  border-radius: 80%; /* Hacer la imagen circular */
+  margin-bottom: 20px; /* Espacio adicional debajo de la imagen */
+  transition: transform 0.3s ease; /* Animación de transformación */
+}
+
+/* Agregar efecto de escala al pasar el cursor */
+.cerveza-info img:hover {
+  transform: scale(1.1); /* Escala la imagen al 110% de su tamaño original */
+}
+
+/* Estilo para la tabla de descripción de la cerveza */
+.cerveza-table {
+  background-color: var(--second-color); /* Fondo semi-transparente */
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--primary-color); /* Sombra */
+}
+
+.cerveza-table h3 {
+  font-size: 30px;
+  color: var(--primary-color); /* Color del texto */
+  margin-bottom: 30px;
+  padding-top: 30px;
+  text-align: center;
+  word-spacing: 5px;
+  letter-spacing: 3px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  padding-left: 5px;
+  margin-bottom: 30px;
+  
+}
+
+th, td {
+  text-align: center;
+  padding-left: 1px;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  font-size: 18px;
+}
+
+th {
+  background-color: var(--tercer-color); /* Fondo del encabezado de la tabla */
+}
+
+.letrasth {
+  font-size: 21px;
+  padding-right: 28px;
+}
+
+
+/* Estilo para los marinajes */
+.marinajes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.marinaje {
+  margin: 0 10px;
+  position: relative;
+}
+
+.marinaje img {
+  width: 155px; /* Tamaño de la imagen del marinaje */
+  height: 155px;
+  border-radius: 50%; /* Hacer la imagen circular */
+  transition: transform 0.3s ease; /* Animación de transformación */
+}
+
+.nombre-mar {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease; /* Animación de opacidad */
+}
+
+.marinaje:hover .nombre-mar {
+  
+  opacity: 1; /* Mostrar el nombre del marinaje al pasar el cursor */
+}
+
+.marinaje:hover  img:hover {
+  transform: scale(1.1); /* Aumentar el tamaño del marinaje al 110% */
+  
+  filter: brightness(150%); /* Cambiar el brillo al pasar el cursor */
+  /* O */
+  filter: saturate(180%); /* Cambiar la saturación al pasar el cursor */
+}
+
+.video-container {
+  /* Fondo blanco para la sección de videos */
+  background-image: linear-gradient(-45deg, #6A8734 50%, #E04D2A 50%);
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+  overflow-x: auto;
+  padding: 20px; /* Espacio interior para separar los vídeos del borde */
+  border-radius: 10px; /* Bordes redondeados para la sección de videos */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para resaltar la sección de videos */
+}
+
+.video-wrapper {
+  position: relative;
+  margin-right: 10px;
+}
+
+.video {
+  width: 320px; /* Ajusta el ancho según lo necesites */
+  height: auto;
+  border-radius: 10px;
+}
+
+.video-overlay {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  border-radius: 7px;
+  font-size: 16px;
+}
+

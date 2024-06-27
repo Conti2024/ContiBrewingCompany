@@ -1,0 +1,59 @@
+/* Estilos personalizados */
+
+/* Establecer el color de fondo y texto */
+body {
+    background-color: #fff; /* blanco */
+    color: #000; /* negro */
+}
+
+/* Estilos para superposición de texto */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: #fff; /* Color del texto */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilos para botones */
+.btn-primary {
+    background-color: #000; /* negro */
+    border-color: #000; /* negro */
+}
+
+.btn-primary:hover {
+    background-color: #fff; /* blanco */
+    border-color: #fff; /* blanco */
+    color: #000; /* negro */
+}
+
+
+/* Efecto de zoom */
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1); /* Ajusta el valor para cambiar el nivel de zoom */
+}
+
+/* Justificar el texto en card-text */
+.card-text {
+    text-align: justify;
+}
